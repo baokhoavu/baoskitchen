@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fetchApi();
         } else {
             drop.value = 'Filters';
+            fetchApi();
         }
     })
 
