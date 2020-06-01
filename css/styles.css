@@ -1,0 +1,191 @@
+html {
+    background-image: url(https://images.pexels.com/photos/4033634/pexels-photo-4033634.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+}
+
+h2 {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 40px;
+}
+
+input {
+    padding: 5px 15px;
+    border: 2px solid #000 !important;
+    border-radius: 4px;
+    width: 275px;
+    height: 30px;
+}
+
+button {
+    padding: 0 15px;
+    margin-left: 10px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background: rgba(103, 128, 159, 1);
+    color: #000;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    transition: 0.4s;
+}
+
+button:hover {
+    background: rgba(232, 232, 232, 1);
+}
+
+img {
+    max-width: 300px;
+    max-height: 240px;
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.25);
+}
+
+p {
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+select {
+    padding: 0 15px;
+    margin-left: 10px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    height: 45px;
+    color: #fff;
+    background: #000;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+select:hover {
+    background: rgba(46, 49, 49, 1);
+}
+
+.title {
+    margin: 5% auto 50px;
+    text-align: center !important;
+}
+.title p {
+    text-align: center !important;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.b {
+    max-width: 720px;
+    margin: 50px auto 0;
+    overflow-y: scroll;
+    max-height: 750px;
+}
+
+.b > div {
+    display: flex;
+    flex-flow: wrap;
+    margin: 10px 0;
+    padding: 10px;
+    background:rgba(255,255,255, 0.5);
+}
+
+.b > div > div {
+    flex: 0 0 50%;
+}
+
+
+.b > div > div:nth-child(1) {
+    display: block;
+}
+
+.b > div > div:nth-child(2) {
+    text-align: right;
+}
+
+div > p {
+    text-align: left;
+    font-weight: bold;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+}
+
+.b div p:nth-child(1) {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.b div p:nth-child(2) {
+    color: rgba(103, 128, 159, 1);
+}
+
+.b span {
+    text-align: left !important;
+    display: block;
+}
+
+.b span a {
+    padding: 5px 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    position: relative;
+    top: 15px;
+    text-decoration: none;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #000;
+    background: rgba(103, 128, 159, 1);
+    transition: 0.4s;
+}
+
+.b span a:hover {
+    text-decoration: underline;
+    background: rgba(232, 232, 232, 1);
+}
+
+@media screen and (max-width: 1280px) {
+    .b {
+        position: relative;
+        right: 40px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .b {
+        max-height: 55vh;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .b {
+        max-height: 55vh;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        background-position-y: 15%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    html {
+        background-position-y: unset;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    html {
+        background-size: auto;
+    }
+}

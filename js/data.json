@@ -1,0 +1,36 @@
+"trucks": [
+    {
+        "_id": {
+            "$oid": "591abe6514903512ca8c9fa2"
+        }, 
+        "approved": "2017-02-21T00:00:00", 
+        "block": "0353", 
+        "blocklot": "0353001", 
+        "cnn": "8122000", 
+        "created_at": {
+            "$date": 1494924901107
+        }, 
+        "dayshours": "We/Th:9AM-3PM", 
+        "expirationdate": "2018-03-15T00:00:00", 
+        "facilitytype": "Truck", 
+        "fooditems": "Korean Fried Chicken", 
+        "location": {
+            "address": "200 LARKIN ST", 
+            "locationdescription": "LARKIN ST: FULTON ST to MCALLISTER ST (200 - 299)", 
+            "point": {
+                "coordinates": [
+                    -122.416025770151, 
+                    37.7802154802881
+                ], 
+                "type": "Point"
+            }
+        }, 
+        "lot": "001", 
+        "name": "Hiyaaa", 
+        "permit": "17MFF-0080", 
+        "priorpermit": "0", 
+        "received": "2017-02-13", 
+        "schedule": "http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=17MFF-0080&ExportPDF=1&Filename=17MFF-0080_schedule.pdf", 
+        "status": "APPROVED"
+    }
+]
