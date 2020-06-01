@@ -4,6 +4,12 @@ This is a single page app that uses Vanilla Javascript as the barebones to fetch
 
 Using minimal code, there exists an index with one attached stylesheet and script. This will be the only necessary files needed to run if desired locally.
 
+HTML, CSS, Javascript
+
+```
+Using Spoonacular for the API.
+````
+
 ## To use:
 
 ```sh
