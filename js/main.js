@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttonText = document.createElement('p');
     let dropDown = document.createElement('select');
 
-    let url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=25&query=";
-    let urlv = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=25&diet=vegetarian&query=";
-    let urlp = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=25&diet=pescetarian&query=";
+    let url = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=25";
 
     input.type = 'text';
     buttonText.textContent = 'Click Here To Search';
@@ -41,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let drop = document.querySelector('.s');
 
         if (drop.value === 'v') {
-            fetch((urlv + input.value), {
+            fetch((url + '&diet=vegetarian&query=' + input.value), {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
@@ -58,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
         } else if (drop.value === 'p') {
-            fetch((urlp + input.value), {
+            fetch((url + '&diet=pescetarian&query=' + input.value), {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
@@ -74,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     console.log('err' + err);
                 });
         } else {
-            fetch((url + input.value), {
+            fetch((url + '&query=' + input.value), {
                     "method": "GET",
                     "headers": {
                         "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
