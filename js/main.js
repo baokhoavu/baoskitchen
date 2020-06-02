@@ -21,6 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
     searchBox.append(dropDown);
     button.append(buttonText);
 
+    const appendData = (data) => {
+        for (i = 0; i < data.results.length; i++) {
+            let name = data.results[i].title;
+            let image = 'https://spoonacular.com/recipeImages/' + data.results[i].image;
+            let serving = data.results[i].servings;
+            let time = data.results[i].readyInMinutes;
+            let link = data.results[i].sourceUrl;
+            let recipe = document.createElement('div');
+            recipe.innerHTML = '<div><p>' + name + '</p><p>Serving Size: ' + serving + '</p><p>Total: ' + time + ' min</p>' + '<span><a href=' + link + '>Recipe</a></span>' + '</div><div><a href=' + image + '><img src="' + image + '" /></a></div>';
+            resBox.append(recipe);
+        }
+    }
+
     const fetchApi = () => {
 
         resBox.innerHTML = '';
@@ -39,17 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     return response.json();
                 })
                 .then(function (data) {
-
-                    for (i = 0; i < data.results.length; i++) {
-                        let name = data.results[i].title;
-                        let image = 'https://spoonacular.com/recipeImages/' + data.results[i].image;
-                        let serving = data.results[i].servings;
-                        let time = data.results[i].readyInMinutes;
-                        let link = data.results[i].sourceUrl;
-                        let recipe = document.createElement('div');
-                        recipe.innerHTML = '<div><p>' + name + '</p><p>Serving Size: ' + serving + '</p><p>Total: ' + time + ' min</p>' + '<span><a href=' + link + '>Recipe</a></span>' + '</div><div><a href=' + image + '><img src="' + image + '" /></a></div>';
-                        resBox.append(recipe);
-                    }
+                    appendData(data);
                 }).catch(function (err) {
                     console.log('err' + err);
                 });
@@ -66,17 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     return response.json();
                 })
                 .then(function (data) {
-
-                    for (i = 0; i < data.results.length; i++) {
-                        let name = data.results[i].title;
-                        let image = 'https://spoonacular.com/recipeImages/' + data.results[i].image;
-                        let serving = data.results[i].servings;
-                        let time = data.results[i].readyInMinutes;
-                        let link = data.results[i].sourceUrl;
-                        let recipe = document.createElement('div');
-                        recipe.innerHTML = '<div><p>' + name + '</p><p>Serving Size: ' + serving + '</p><p>Total: ' + time + ' min</p>' + '<span><a href=' + link + '>Recipe</a></span>' + '</div><div><a href=' + image + '><img src="' + image + '" /></a></div>';
-                        resBox.append(recipe);
-                    }
+                    appendData(data);
                 }).catch(function (err) {
                     console.log('err' + err);
                 });
@@ -92,19 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     return response.json();
                 })
                 .then(function (data) {
-
                     // console.log(data)
-
-                    for (i = 0; i < data.results.length; i++) {
-                        let name = data.results[i].title;
-                        let image = 'https://spoonacular.com/recipeImages/' + data.results[i].image;
-                        let serving = data.results[i].servings;
-                        let time = data.results[i].readyInMinutes;
-                        let link = data.results[i].sourceUrl;
-                        let recipe = document.createElement('div');
-                        recipe.innerHTML = '<div><p>' + name + '</p><p>Serving Size: ' + serving + '</p><p>Total: ' + time + ' min</p>' + '<span><a href=' + link + '>Recipe</a></span>' + '</div><div><a href=' + image + '><img src="' + image + '" /></a></div>';
-                        resBox.append(recipe);
-                    }
+                    appendData(data);
                 }).catch(function (err) {
                     console.log('err' + err);
                 });
